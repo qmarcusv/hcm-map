@@ -1,0 +1,20 @@
+[
+	{
+		"name": "Đại học Bách Khoa TP.HCM",
+		"address": "268 Lý Thường Kiệt, Q.10",
+		"lat": 10.7721,
+		"lng": 106.6589
+	},
+	{
+		"name": "Đại học Kinh tế TP.HCM",
+		"address": "59C Nguyễn Đình Chiểu, Q.3",
+		"lat": 10.7798,
+		"lng": 106.6884
+	},
+	{
+		"name": "Đại học KHXH&NV TP.HCM",
+		"address": "10-12 Đinh Tiên Hoàng, Q.1",
+		"lat": 10.7876,
+		"lng": 106.7056
+	}
+]

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bản đồ TP.HCM - Trường Đại học</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			#map {
+				height: 100vh;
+				width: 100vw;
+			}
+
+			.district-label {
+				font-family: 'Segoe UI', sans-serif;
+				font-size: 10px;
+				color: black;
+				font-weight: bold;
+				text-shadow: 1px 1px 1px white;
+				background: none;
+				border: none;
+			}
+
+			.district-tooltip {
+				background: rgba(255, 255, 255, 0.95) !important;
+				border: 1px solid #ccc !important;
+				border-radius: 4px !important;
+				font-weight: bold !important;
+				color: #333 !important;
+			}
+
+			.custom-marker {
+				background: none;
+				border: none;
+			}
+
+			/* Style cho popup */
+			.leaflet-popup-content-wrapper {
+				border-radius: 8px;
+			}
+
+			.leaflet-popup-content {
+				margin: 10px 15px;
+				line-height: 1.4;
+			}
+
+			/* Loading indicator */
+			.loading {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2000;
+				background: white;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+				display: none;
+			}
+
+			.loading.show {
+				display: block;
+			}
+
+			/* Responsive */
+			@media (max-width: 768px) {
+				.district-label {
+					font-size: 8px;
+				}
+			}
+
+			/* Animation cho markers */
+			.custom-marker div {
+				transition: transform 0.2s ease;
+			}
+
+			.custom-marker:hover div {
+				transform: scale(1.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+
+		<div id="loading" class="loading">
+			<div>Đang tải dữ liệu bản đồ...</div>
+		</div>
+
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+		<script src="map.js"></script>
+	</body>
+</html>
